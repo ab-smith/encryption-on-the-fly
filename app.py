@@ -57,7 +57,8 @@ def encrypt():
     except:
         abort(403)
     
-    return encrypted
+    return json.dumps({'ciphertext':encrypted.decode()})
+     
 
 @app.route("/decrypt", methods=['POST'])
 def decrypt():
@@ -82,7 +83,7 @@ def decrypt():
     except:
         abort(403)
 
-    return decrypted
+    return json.dumps({'plaintext':decrypted.decode()})
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
