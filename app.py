@@ -81,6 +81,7 @@ class Encryption(Resource):
         
         return {'ciphertext':encrypted.decode()}
 
+
 @name_space.route('/decrypt')
 class Decryption(Resource):
     '''
