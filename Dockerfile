@@ -7,10 +7,11 @@ RUN mkdir /app
 COPY requirements.txt /app
 COPY app.py /app
 COPY wsgi.py /app
+COPY start.sh /app
 WORKDIR /app
 
 RUN pip install -r requirements.txt
 
 EXPOSE 5000
 
-CMD ["./start.sh"]
+CMD ["/app/start.sh"]
