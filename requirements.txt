@@ -1,5 +1,5 @@
 Flask==1.0.2
 flask_restplus==0.12.1
-cryptography==2.6.1
+cryptography==3.2
 cffi==1.12.3
 gunicorn==19.9.0
